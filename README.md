@@ -6,6 +6,14 @@ SakaIA prevents groundwater well depletion and resolves community conflict over 
 
 ---
 
+## Demo 
+https://skaia-ten.vercel.app/
+
+---
+
+
+![SakaIA Platform Overview](public/image.png)
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
