@@ -20,7 +20,7 @@ export default function Sidebar({ activeTab, onTabChange }) {
             <Waves className="h-6 w-6 text-saka-300" />
           </div>
           <div>
-            <h1 className="text-lg font-bold tracking-tight text-white">SakaIA</h1>
+            <h1 className="text-lg font-bold tracking-tight text-white">SakIA</h1>
             <p className="text-xs text-saka-300/90">Cooperative Well Governance</p>
           </div>
         </div>

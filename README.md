@@ -1,8 +1,8 @@
-# SakaIA — Cooperative Well Governance Platform
+# SakIA — Cooperative Well Governance Platform
 
 > **Water-aware crop intelligence and borehole governance for Moroccan farming cooperatives (AUEA systems)**
 
-SakaIA prevents groundwater well depletion and resolves community conflict over shared boreholes by matching crop selection to aquifer health and algorithmically scheduling pump access across cooperative members.
+SakIA prevents groundwater well depletion and resolves community conflict over shared boreholes by matching crop selection to aquifer health and algorithmically scheduling pump access across cooperative members.
 
 ---
 
@@ -12,7 +12,7 @@ https://skaia-ten.vercel.app/
 ---
 
 
-![SakaIA Platform Overview](public/image.png)
+![SakIA Platform Overview](public/image.png)
 
 ## Table of Contents
 
@@ -35,14 +35,14 @@ https://skaia-ten.vercel.app/
 
 ## Project Overview
 
-SakaIA (from Arabic *سقى* — "to water") is a standalone, water-aware agricultural intelligence platform built for Moroccan AUEA cooperatives — formal associations sharing a single groundwater borehole. The platform operates on two axes:
+SakIA (from Arabic *سقى* — "to water") is a standalone, water-aware agricultural intelligence platform built for Moroccan AUEA cooperatives — formal associations sharing a single groundwater borehole. The platform operates on two axes:
 
 | Axis | Question answered | Module |
 |---|---|---|
 | **Crop Intelligence** | *What should I plant?* | Crop Advisor |
 | **Well Governance** | *When can I pump?* | Irrigation Queue |
 
-Both axes are anchored to real-time borehole telemetry displayed on the **Dashboard**, making SakaIA the first integrated solution for the crop–water–cooperative governance triangle in Morocco's over-extracted aquifer basins.
+Both axes are anchored to real-time borehole telemetry displayed on the **Dashboard**, making SakIA the first integrated solution for the crop–water–cooperative governance triangle in Morocco's over-extracted aquifer basins.
 
 ---
 
@@ -56,7 +56,7 @@ Morocco's three most agriculturally productive basins — **Souss-Massa**, **Hao
 
 3. **Energy waste** — Uncoordinated pumping — multiple valves open simultaneously, pumps running during low-recharge windows — wastes butane fuel and solar pump capacity at an estimated cost of 1,500–3,000 MAD per hectare per year.
 
-SakaIA addresses all three failure modes with one integrated, low-cost platform.
+SakIA addresses all three failure modes with one integrated, low-cost platform.
 
 ---
 
@@ -158,8 +158,8 @@ The hardware prototype (not in this repo) runs on:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ilyassouhsseine/sakaia.git
-cd sakaia
+git clone https://github.com/ilyassouhsseine/SakIA.git
+cd SakIA
 
 # Install dependencies
 npm install
@@ -195,7 +195,7 @@ The recommended 2-minute hackathon demo path:
 - Set Soil Type to **Clay-Loam**, Salinity to **Medium** (2.4 dS/m), field size to **3.5 Ha**
 - Click **Run Agronomic Matching Engine**
 - Show results: Quinoa (94% match, salinity-tolerant), Olives (88% match, low water demand), Mint (REJECTED — exceeds well quota)
-- Key message: *"SakaIA tells farmers what to plant before they plant it — not after the crop fails."*
+- Key message: *"SakIA tells farmers what to plant before they plant it — not after the crop fails."*
 
 ### Step 3 — Irrigation Queue (45s)
 - Show the initial state: **Fatima's plot is critical** (14% soil moisture), valve open and pumping
@@ -247,7 +247,7 @@ RECHARGE_SERIES   // array  — { time: string, rate: number (m/h) }
 
 ## Business Model
 
-SakaIA operates on a four-tier revenue structure designed for the Moroccan cooperative institutional context. All billing targets the **AUEA treasurer** — a legally registered officer — not individual smallholders.
+SakIA operates on a four-tier revenue structure designed for the Moroccan cooperative institutional context. All billing targets the **AUEA treasurer** — a legally registered officer — not individual smallholders.
 
 | Tier | Model | Price | Notes |
 |---|---|---|---|

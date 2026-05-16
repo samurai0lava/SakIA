@@ -41,7 +41,7 @@ export default function App() {
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
       <main className="flex-1 overflow-auto">
         <div className="border-b border-slate-200/80 bg-white/80 px-6 py-4 backdrop-blur lg:hidden">
-          <p className="text-xs font-medium text-saka-700">SakaIA · Cooperative Insights</p>
+          <p className="text-xs font-medium text-saka-700">SakIA · Cooperative Insights</p>
         </div>
         <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8 lg:px-10">
           {renderPanel()}
