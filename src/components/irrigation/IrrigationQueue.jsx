@@ -37,8 +37,6 @@ export default function IrrigationQueue({
   queue,
   simulationStep,
   lastSimulatedAt,
-  tourbaSync,
-  tourbaMultiplier,
   onAdvance,
   onReset,
 }) {
@@ -54,14 +52,6 @@ export default function IrrigationQueue({
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          {tourbaSync ? (
-            <StatusBadge variant="tourba">
-              Tourba DRR {tourbaMultiplier >= 1 ? '+' : ''}
-              {Math.round((tourbaMultiplier - 1) * 100)}%
-            </StatusBadge>
-          ) : (
-            <StatusBadge variant="warning">Legacy scheduler</StatusBadge>
-          )}
           {simulationStep > 0 && (
             <StatusBadge variant="info">+{simulationStep * 6}h simulated</StatusBadge>
           )}
@@ -112,9 +102,7 @@ export default function IrrigationQueue({
         {queue.map((plot) => {
           const prio = PRIORITY_LABELS[plot.priority] ?? PRIORITY_LABELS.low;
           const isActive = plot.status === 'active';
-          const effectiveDeficit = Math.round(
-            plot.deficit * (tourbaSync ? tourbaMultiplier : 0.92),
-          );
+          const effectiveDeficit = Math.round(plot.deficit);
 
           return (
             <li
@@ -152,7 +140,6 @@ export default function IrrigationQueue({
                   </h3>
                   <p className="text-xs text-slate-500">
                     DRR deficit: {effectiveDeficit}
-                    {tourbaSync ? ' (Tourba-weighted)' : ' (legacy)'}
                   </p>
                 </div>
               </div>
@@ -179,7 +166,6 @@ export default function IrrigationQueue({
         {/* DRR handoff: active plot closes valve after recharge window; highest effective deficit wins slot */}
         Algorithm note: after each 6h window, the active farmer&apos;s moisture rises and valve closes.
         The next slot goes to the highest root-zone deficit (Amine after Fatima in the default demo path).
-        Toggle Tourba on the Ecosystem tab to apply the +12% fairness multiplier instantly.
       </p>
     </div>
   );

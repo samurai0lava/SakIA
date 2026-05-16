@@ -1,7 +1,6 @@
 import {
   BarChart3,
   Droplets,
-  Leaf,
   Sprout,
   Waves,
 } from 'lucide-react';
@@ -10,10 +9,9 @@ const NAV_ITEMS = [
   { id: 'dashboard', label: 'Dashboard Overview', icon: BarChart3, emoji: '📊' },
   { id: 'crop', label: 'Crop Advisor', subtitle: 'What to Plant', icon: Sprout, emoji: '🌾' },
   { id: 'irrigation', label: 'Irrigation Queue', subtitle: 'When to Pump', icon: Droplets, emoji: '💧' },
-  { id: 'tourba', label: 'Tourba Ecosystem', subtitle: 'InnovX Insights', icon: Leaf, emoji: '🌱' },
 ];
 
-export default function Sidebar({ activeTab, onTabChange, tourbaSync }) {
+export default function Sidebar({ activeTab, onTabChange }) {
   return (
     <aside className="flex w-full flex-col border-r border-saka-900/10 bg-gradient-to-b from-saka-950 via-saka-900 to-saka-950 lg:w-72 lg:min-h-screen">
       <div className="border-b border-white/10 px-6 py-6">
@@ -27,7 +25,7 @@ export default function Sidebar({ activeTab, onTabChange, tourbaSync }) {
           </div>
         </div>
         <p className="mt-3 text-[11px] leading-relaxed text-saka-200/70">
-          Moroccan farming cooperatives · InnovX Tourba aligned
+          Moroccan farming cooperatives · shared well governance
         </p>
       </div>
 
@@ -65,21 +63,6 @@ export default function Sidebar({ activeTab, onTabChange, tourbaSync }) {
           );
         })}
       </nav>
-
-      <div className="hidden border-t border-white/10 p-4 lg:block">
-        <div
-          className={`rounded-xl px-4 py-3 text-xs ${
-            tourbaSync ? 'bg-saka-500/20 text-saka-100' : 'bg-amber-500/20 text-amber-100'
-          }`}
-        >
-          <p className="font-semibold">{tourbaSync ? 'Tourba Sync ON' : 'Tourba Sync OFF'}</p>
-          <p className="mt-1 opacity-80">
-            {tourbaSync
-              ? 'DRR fairness boost active on irrigation queue'
-              : 'Legacy scheduling — reduced queue fairness'}
-          </p>
-        </div>
-      </div>
     </aside>
   );
 }

@@ -15,14 +15,12 @@ import MetricCard from '../ui/MetricCard';
 import StatusBadge from '../ui/StatusBadge';
 import RechargeChart from './RechargeChart';
 
-export default function DashboardOverview({ activePlot, tourbaSync }) {
+export default function DashboardOverview({ activePlot }) {
   const pumpLabel = activePlot
     ? `Valve Open — Plot #${activePlot.plotId} (${activePlot.farmer}'s Field)`
     : 'Valve Closed — Queue Idle';
 
-  const energyDisplay = tourbaSync
-    ? `${(ENERGY_SAVED_KWH * 1.08).toFixed(0)} kWh`
-    : `${ENERGY_SAVED_KWH} kWh`;
+  const energyDisplay = `${ENERGY_SAVED_KWH} kWh`;
 
   return (
     <div className="space-y-6">
@@ -60,7 +58,7 @@ export default function DashboardOverview({ activePlot, tourbaSync }) {
           icon={Zap}
           label="Cooperative Energy Saved"
           value={energyDisplay}
-          badge={tourbaSync ? 'Tourba Optimized' : 'Baseline'}
+          badge="Optimized"
           badgeVariant="success"
           subtext="Solar pump scheduling vs. uncoordinated draw"
         />

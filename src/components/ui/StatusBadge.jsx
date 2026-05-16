@@ -4,7 +4,6 @@ const VARIANTS = {
   danger: 'bg-red-50 text-red-700 ring-red-200',
   info: 'bg-sky-50 text-sky-800 ring-sky-200',
   neutral: 'bg-slate-100 text-slate-700 ring-slate-200',
-  tourba: 'bg-saka-50 text-saka-800 ring-saka-200',
 };
 
 export default function StatusBadge({ children, variant = 'neutral', className = '' }) {
